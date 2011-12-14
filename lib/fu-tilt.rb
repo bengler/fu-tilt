@@ -17,7 +17,7 @@ module Fu
 
     def partial(name)
       return Fu.to_mustache(@on_partial.call(name)) if @on_partial
-      "[#{name}]"
+      raise "Shucks! No partial callback defined."
     end
   end
 end
